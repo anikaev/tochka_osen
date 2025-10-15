@@ -9,7 +9,7 @@ ENTRANCES = (2, 4, 6, 8)
 HALLWAY_STOPS = (0, 1, 3, 5, 7, 9, 10)
 
 
-State = Tuple[Tuple[str, ...], Tuple[Tuple[str, ...], ...]]  # (hallway[11], rooms[4][depth])
+State = Tuple[Tuple[str, ...], Tuple[Tuple[str, ...], ...]]
 
 def parse_input(lines: List[str]) -> State:
     hallway = None
@@ -124,7 +124,7 @@ def neighbors(state: State) -> List[Tuple[State, int]]:
 
         ti = top_occupant_index(room)
         if ti == -1:
-            continue  # комната пуста
+            continue
 
         who = room[ti]
 
